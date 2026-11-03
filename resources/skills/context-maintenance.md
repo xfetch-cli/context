@@ -22,7 +22,6 @@
 ```bash
 grep -rn '/home/' . --include='*.md'
 grep -rniE 'token|secret|password|api[_-]?key|gho_|ghp_|github_pat_' . --include='*.md'
-grep -rn 'private notebook' . --include='*.md'
 ```
 
 Fix any real path or secret. Generic mentions of `token`,

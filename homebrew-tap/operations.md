@@ -48,6 +48,8 @@ d4c1572 Merge pull request #2 from xfetch-cli/release/1.0.0
 368d67d Update to 1.0.0
 cc9ca03 Merge pull request #3 from xfetch-cli/release/v1.0.1
 f9b920d xfetch 1.0.1
+7b6d3bd Merge pull request #5 from xfetch-cli/release/v1.0.2
+6acea67 xfetch 1.0.2
 ```
 
 Convention: branch `release/<version>` (older) or `release/v<version>` (newer),
@@ -147,8 +149,8 @@ brew untap xfetch-cli/tap
 - **Tap name vs repository name.** `brew tap xfetch-cli/tap` clones
   `homebrew-tap`, not `tap`. A repository rename would require a new tap name
   and would break every documented install command.
-- **Version formatting.** `version "1.0.1"` has no `v`; the URL path is
-  `/download/v1.0.1/` with a `v`; the archive name embeds `1.0.1` without `v`.
+- **Version formatting.** `version "1.0.2"` has no `v`; the URL path is
+  `/download/v1.0.2/` with a `v`; the archive name embeds `1.0.2` without `v`.
   Mixing these up produces 404s or checksum failures.
 - **Asset immutability.** GitHub allows replacing a release asset, but Homebrew
   clients and caches assume immutability. A replaced asset with a different
@@ -163,9 +165,9 @@ brew untap xfetch-cli/tap
   not apply.
 - **No CI.** A syntax error or wrong checksum is not caught until a user
   installs. Run `ruby -c` and `brew audit --strict --online` before merging.
-- **Security drift.** The formula at HEAD serves v1.0.1. The v1.0.2 changelog
-  says v1.0.1 binaries remain affected by wasmtime/zstd advisories. Treat the
-  v1.0.2 bump as urgent once the release exists.
+- **Security updates.** The formula serves v1.0.2, which includes the
+  wasmtime/zstd advisory fixes. Keep the tap aligned with the latest core
+  release; do not leave users on v1.0.1.
 - **Prebuilt binaries and Gatekeeper.** Homebrew-installed binaries are not
   quarantined, so no signing is required. If a user downloads a release tarball
   manually and moves it into place, Gatekeeper behavior is different; direct

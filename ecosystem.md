@@ -174,7 +174,7 @@ before remote `search` works.
 | Manifest schema | 1 |
 | Catalog schema | 1 |
 | Catalog version | 1.0.2 (main) |
-| Homebrew formula | 1.0.1 (needs bump to the released version) |
+| Homebrew formula | 1.0.2 (published) |
 | Web docs version | 1.0.1 (needs bump to the released version) |
 | Theme registry | 83 themes |
 | Logo catalog | 128 art files |

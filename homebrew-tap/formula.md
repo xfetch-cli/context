@@ -26,16 +26,16 @@ class Xfetch < Formula
   desc "A fast, customizable system information fetch tool for the terminal"
   homepage "https://github.com/xfetch-cli/xfetch"
   license "MIT"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/xfetch-cli/xfetch/releases/download/v1.0.1/xfetch-1.0.1-aarch64-apple-darwin.tar.gz"
-      sha256 "61802e0b1694a0fded8894be8ce773e0093dcceb6ada932ce0f7b8193607b775"
+      url "https://github.com/xfetch-cli/xfetch/releases/download/v1.0.2/xfetch-1.0.2-aarch64-apple-darwin.tar.gz"
+      sha256 "8379ceaab87463dcccd9862efc6ecfbb2d0478a415e0b703eba74eb5b8a04252"
     end
     on_intel do
-      url "https://github.com/xfetch-cli/xfetch/releases/download/v1.0.1/xfetch-1.0.1-x86_64-apple-darwin.tar.gz"
-      sha256 "e3965ae0b127404a857fd256d5882a569976ec2072634ec859ca29a9976fbb80"
+      url "https://github.com/xfetch-cli/xfetch/releases/download/v1.0.2/xfetch-1.0.2-x86_64-apple-darwin.tar.gz"
+      sha256 "6a7688586559506189ad4bb16b92ff135852ddf21ccdd6a91ba3881f8cf9a560"
     end
   end
 
@@ -56,11 +56,11 @@ end
 | `desc` | `A fast, customizable system information fetch tool for the terminal` | Kept short; no trailing period |
 | `homepage` | `https://github.com/xfetch-cli/xfetch` | Main repo, not this tap |
 | `license` | `MIT` | Matches the core repo |
-| `version` | `1.0.1` | No leading `v` |
+| `version` | `1.0.2` | No leading `v` |
 | `on_macos` / `on_arm` | `aarch64-apple-darwin` tarball | Apple Silicon |
 | `on_macos` / `on_intel` | `x86_64-apple-darwin` tarball | Intel Macs |
-| `sha256` (arm64) | `61802e0b1694a0fded8894be8ce773e0093dcceb6ada932ce0f7b8193607b775` | 64 hex chars |
-| `sha256` (x86_64) | `e3965ae0b127404a857fd256d5882a569976ec2072634ec859ca29a9976fbb80` | 64 hex chars |
+| `sha256` (arm64) | `8379ceaab87463dcccd9862efc6ecfbb2d0478a415e0b703eba74eb5b8a04252` | 64 hex chars |
+| `sha256` (x86_64) | `6a7688586559506189ad4bb16b92ff135852ddf21ccdd6a91ba3881f8cf9a560` | 64 hex chars |
 | `install` | `bin.install "xfetch"` | Archive root contains `xfetch` |
 | `test` | `assert_match version.to_s, shell_output("#{bin}/xfetch --version")` | Smoke test only |
 
@@ -76,8 +76,8 @@ The formula deliberately has:
 ## Supported platforms
 
 ```text
-macOS arm64  (Apple Silicon) -> xfetch-1.0.1-aarch64-apple-darwin.tar.gz
-macOS x86_64 (Intel)         -> xfetch-1.0.1-x86_64-apple-darwin.tar.gz
+macOS arm64  (Apple Silicon) -> xfetch-1.0.2-aarch64-apple-darwin.tar.gz
+macOS x86_64 (Intel)         -> xfetch-1.0.2-x86_64-apple-darwin.tar.gz
 Everything else              -> no URL; install fails
 ```
 
@@ -116,18 +116,12 @@ The formula points at
 `https://github.com/xfetch-cli/xfetch/releases/download/v<version>/...`, so the
 tag must exist and the asset names must match exactly.
 
-## Current drift
+## Current state
 
-At local HEAD the formula is still `1.0.1`, while the `xfetch` clone's
-`Cargo.toml` is `1.0.2` and `CHANGELOG.md` documents `v1.0.2` dated 2026-11-03.
-The local `xfetch` clone had no `v1.0.2` tag at the time of verification
-(`git tag -l` ended at `v1.0.1`), so the tap is expected to lag until the
-release is tagged and published.
-
-Security relevance: the v1.0.2 changelog states that "Binaries built from
-v1.0.1 remain affected by these advisories; upgrade to v1.0.2." The tap
-currently serves v1.0.1. Bumping the formula after v1.0.2 is released is
-therefore both a routine update and a security fix.
+The formula is aligned with the published `v1.0.2` release. The arm64 and
+x86_64 URLs and SHA-256 values come from the release `SHA256SUMS` and were
+re-verified by downloading both macOS archives. This is the security update
+from v1.0.1.
 
 ## Bump procedure
 

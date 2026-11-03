@@ -136,8 +136,6 @@ bash scripts/ci.sh
   `release/v1.0.3` (PR #200) adopts it, while v1.0.2 and the addons still use
   `0.2.0`.
 - `web` hardcodes 1.0.1 and lists 17 themes while the registry has 83.
-- `homebrew-tap` is on 1.0.1 and needs a bump to the released version with the
-  published asset URLs and checksums.
 - `--gen-config` template default is `section`; the CLI help now matches, but
   older docs/help snapshots may still say `pacman`.
 - `assets` HEAD reverted the social preview directory; the org profile text

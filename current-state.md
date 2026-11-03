@@ -72,16 +72,15 @@ repo's `main`. Addons still pin SDK `0.2.0`; they can adopt 0.3.0 later.
 1. Review and merge xfetch PR #200; tag and publish `v1.0.3` when approved.
 2. Publish `xfetch-cli` to crates.io. `1.0.2` and `1.0.3` are both unpublished
    there; publishing 1.0.3 after the tag gives the definitive metadata.
-3. Bump `homebrew-tap` to the released version with asset URLs and SHA-256.
-4. Update `web` from `1.0.1` to the released version and refresh docs/changelog.
-5. Bump the AUR packages after the release assets exist.
-6. Optionally adopt SDK 0.3.0 in the addon repos.
-7. Optional: enforce `python3 scripts/generate_catalog.py --check` in addon CI.
-8. Optional: real Windows runtime validation of the plugins branch.
+3. Update `web` from `1.0.1` to the released version and refresh docs/changelog.
+4. Bump the AUR packages after the release assets exist.
+5. Optionally adopt SDK 0.3.0 in the addon repos.
+6. Optional: enforce `python3 scripts/generate_catalog.py --check` in addon CI.
+7. Optional: real Windows runtime validation of the plugins branch.
 
 ## Known inconsistencies / risks
 
-- `homebrew-tap` and `web` still reference `1.0.1`.
+- `web` still references `1.0.1`; `homebrew-tap` is on 1.0.2.
 - crates.io `xfetch-cli` is `1.0.1`; GitHub Releases have `v1.0.2` and the
   `v1.0.3` candidate is only a branch/PR.
 - Addons still consume SDK `0.2.0`; `release/v1.0.3` adopts `0.3.0`.

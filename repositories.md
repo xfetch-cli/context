@@ -28,7 +28,7 @@ role, default branch and the commit observed during verification on
 | `themes` | `../themes` | `github.com/xfetch-cli/themes` | `main` | `8c2a16c` | Theme registry: `index.json`, schema, 83 `colors/*.jsonc`. |
 | `logos` | `../logos` | `github.com/xfetch-cli/logos` | `main` | `ead5f70` | ASCII logo catalog: `logos.json`, 128 art files; real X art. |
 | `assets` | `../assets` | `github.com/xfetch-cli/assets` | `main` | `d1863fe` | Shared brand assets, primarily `logo/banner/xfetch.svg`. |
-| `homebrew-tap` | `../homebrew-tap` | `github.com/xfetch-cli/homebrew-tap` | `main` | `cc9ca03` | Homebrew formula for macOS prebuilt binaries. |
+| `homebrew-tap` | `../homebrew-tap` | `github.com/xfetch-cli/homebrew-tap` | `main` + `release/v1.0.2` | `7b6d3bd` | Homebrew formula for macOS prebuilt binaries. |
 | `.github` | `../.github` | `github.com/xfetch-cli/.github` | `main` | `9522504` | Organization profile (`profile/README.md`). |
 
 ## Context repository

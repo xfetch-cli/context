@@ -21,13 +21,13 @@ to match the tap name.
 | Local clone | `~/repos/xfetch-cli/homebrew-tap` |
 | Remote (fetch/push) | `https://github.com/xfetch-cli/homebrew-tap.git` |
 | Default branch | `main` (`origin/HEAD -> origin/main`) |
-| HEAD | `cc9ca03ed62401fac76904973ea0315e25bcb50d` |
-| HEAD date | 2026-10-25 20:12:27 +0100 |
-| HEAD subject | `Merge pull request #3 from xfetch-cli/release/v1.0.1` |
+| HEAD | `7b6d3bd6634899f43b97982d1360eacb0e09b94c` |
+| HEAD date | 2026-11-03 |
+| HEAD subject | `Merge pull request #5 from xfetch-cli/release/v1.0.2` |
 | Tracked files | `README.md`, `Formula/xfetch.rb` |
 
 Remote branches visible in the local clone: `origin/main`,
-`origin/release/1.0.0`, `origin/release/v1.0.1`. There are no tags in this
+`origin/release/1.0.0`, `origin/release/v1.0.1`, `origin/release/v1.0.2`. There are no tags in this
 repository.
 
 ## Contents
@@ -40,7 +40,7 @@ homebrew-tap/
     `-- xfetch.rb
 ```
 
-There are no CI workflows, bottles, helper scripts, or license files here.
+There are no CI workflows, bottles or helper scripts here. The MIT license is in `LICENSE`.
 
 ## Install
 
@@ -51,7 +51,7 @@ brew install xfetch
 
 The first command clones `github.com/xfetch-cli/homebrew-tap` into Homebrew's
 tap directory. The second downloads the matching prebuilt tarball from the
-`xfetch` v1.0.1 release and installs the `xfetch` binary into Homebrew's `bin`.
+`xfetch` v1.0.2 release and installs the `xfetch` binary into Homebrew's `bin`.
 
 ## Update
 

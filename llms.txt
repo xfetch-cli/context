@@ -1,0 +1,42 @@
+# xfetch-cli context
+
+> Developer and AI context for the xfetch ecosystem. Documentation only; the
+> source repositories are separate clones under ~/repos/xfetch-cli/.
+
+## Repositories
+
+- xfetch: https://github.com/xfetch-cli/xfetch (core binary, probes, UI, addon runtime)
+- api: https://github.com/xfetch-cli/api (SDK crates, JSON protocols, WIT)
+- plugins: https://github.com/xfetch-cli/plugins (official plugins)
+- effects: https://github.com/xfetch-cli/effects (intro effects)
+- extensions: https://github.com/xfetch-cli/extensions (config providers)
+- web: https://github.com/xfetch-cli/web (landing and docs)
+- configs: https://github.com/xfetch-cli/configs (presets)
+- themes: https://github.com/xfetch-cli/themes (theme registry)
+- logos: https://github.com/xfetch-cli/logos (ASCII art catalog)
+- assets: https://github.com/xfetch-cli/assets (brand assets)
+- homebrew-tap: https://github.com/xfetch-cli/homebrew-tap (macOS formula)
+- .github: https://github.com/xfetch-cli/.github (org profile)
+
+## Key documents
+
+- README.md: map and entrypoint
+- ecosystem.md: architecture, wire protocols, catalogs, version matrix
+- repositories.md: local paths, remotes, branches, authoritative sources
+- workflows.md: end-to-end task recipes
+- conventions.md: versioning, naming, security, CI invariants
+- current-state.md: branches, PRs, releases and pending work
+- future-roadmap.md: v1.0.3, crates.io, JSON output and CI plans
+- crates-io/README.md: publishing context
+- AGENTS.md: operating rules for coding agents
+- resources/: agent roles and task skills
+
+## Current invariants
+
+- JSON addon protocol: 1
+- WIT package: xfetch:runtime@0.1.0
+- Manifest schema: 1
+- Catalog schema: 1
+- Plugins add info, effects transform output, extensions mutate config
+- Published crates.io versions are immutable
+- Use ~/repos/xfetch-cli/<repo> in commands

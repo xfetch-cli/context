@@ -119,7 +119,7 @@ xfetch wasm run ./foo.wasm --request '{"version":1,"kind":"info_provider"}'
 
 ## License
 
-Documentation and resources are licensed under CC BY 4.0; see [LICENSE](LICENSE).
+Documentation and resources are licensed under CC BY 4.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 Attribution: xscriptor (https://github.com/xscriptor).
 
 ## Scope notes

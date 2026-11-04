@@ -73,10 +73,9 @@ repo's `main`. Addons still pin SDK `0.2.0`; they can adopt 0.3.0 later.
 2. Publish `xfetch-cli` to crates.io. `1.0.2` and `1.0.3` are both unpublished
    there; publishing 1.0.3 after the tag gives the definitive metadata.
 3. Update `web` from `1.0.1` to the released version and refresh docs/changelog.
-4. Bump the AUR packages after the release assets exist.
-5. Optionally adopt SDK 0.3.0 in the addon repos.
-6. Optional: enforce `python3 scripts/generate_catalog.py --check` in addon CI.
-7. Optional: real Windows runtime validation of the plugins branch.
+4. Optionally adopt SDK 0.3.0 in the addon repos.
+5. Optional: enforce `python3 scripts/generate_catalog.py --check` in addon CI.
+6. Optional: real Windows runtime validation of the plugins branch.
 
 ## Known inconsistencies / risks
 
@@ -84,4 +83,5 @@ repo's `main`. Addons still pin SDK `0.2.0`; they can adopt 0.3.0 later.
 - crates.io `xfetch-cli` is `1.0.1`; GitHub Releases have `v1.0.2` and the
   `v1.0.3` candidate is only a branch/PR.
 - Addons still consume SDK `0.2.0`; `release/v1.0.3` adopts `0.3.0`.
-- AUR package updates are manual and require published release assets.
+- AUR packages are updated to 1.0.2: `xfetch-core-bin` 1.0.2-1 and
+  `xfetch-git` r163.5fb26a3-1. The next bump follows the next release.
